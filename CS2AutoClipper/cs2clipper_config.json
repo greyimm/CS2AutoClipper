@@ -1,0 +1,10 @@
+{
+    "video_folder": "D:/Videos/Counter-strike 2",
+    "output_folder": "C:\\Users\\dgkbr\\OneDrive\\Documents\\Desktop\\Misc\\Projects\\CS2Clipper\\trimmedvideos",
+    "trim_start_seconds": 4,
+    "trim_end_seconds": 3,
+    "resolution_width": 1920,
+    "resolution_height": 1080,
+    "num_videos_to_process": 5,
+    "unsorted_folder": "C:\\Users\\dgkbr\\OneDrive\\Documents\\Desktop\\Misc\\Projects\\CS2Clipper\\unsortedfiles"
+}
