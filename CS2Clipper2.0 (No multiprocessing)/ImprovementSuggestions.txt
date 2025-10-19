@@ -1,0 +1,39 @@
+HIGH SEVERITY:
+
+Video Codec (Line 355) - Currently uses 'mp4v' which produces large, poorly compressed files. Should integrate FFmpeg for H.264 encoding
+
+MEDIUM SEVERITY:
+
+Resolution Scaling (Lines 107-109) - Killfeed detection uses hardcoded ratios assuming 1080p. May fail on 1440p/4K
+Inconsistent Naming (Line 368) - Videos should all have naming conventions (add with icon detection)
+
+Further Sorting Possibility: You could make it so that it detects if it is a deathmatch clip via the squares on the top, 
+if there are more than 10 squares at the top at once, then the clip is definitely deathmatch. (Other tells could also help)
+
+LOW SEVERITY:
+
+Debug Output - Still prints in optimized mode
+Pending Rectangle Spam - Prints too often
+Error Handling - One corrupted video could crash entire batch
+
+💡 Top Enhancement Opportunities:
+
+Progress Indicator - Show real-time % progress during processing
+FFmpeg Integration - Better compression, smaller files, H.264 support
+Configurable Kill Threshold - Let users choose max kills (not hardcoded at 5)
+Batch Resume - Skip already-processed videos if script is re-run
+Multi-threading - Process multiple videos simultaneously
+
+🧪 Critical Tests You Should Run:
+
+✅ Different resolutions - Test 1440p and 4K videos
+✅ ACE clips - Test videos with 5+ kills to see if they're valuable
+✅ Edge cases - Kills in first/last second of video
+✅ Corrupted files - Make sure one bad file doesn't crash the batch
+✅ Different CS2 themes - Some skins might use slightly different reds
+
+Would you like me to implement any of these fixes while you're testing? The top 3 I'd recommend tackling first are:
+
+Consistent naming (easy fix)
+Error handling wrapper (prevents crashes)
+Configurable kill threshold (adds flexibility)
