@@ -1,0 +1,51 @@
+HIGH SEVERITY:
+
+Video Codec (Line 355) - Currently uses 'mp4v' which produces large, poorly compressed files. Should integrate FFmpeg for H.264 encoding
+
+Videos seem to be getting saved to other locations than the specified output folder. 
+
+MEDIUM SEVERITY:
+
+Resolution Scaling (Lines 107-109) - Killfeed detection uses hardcoded ratios assuming 1080p. May fail on 1440p/4K
+Inconsistent Naming (Line 368) - Videos should all have naming conventions (add with icon detection)
+
+Further Sorting Possibility: You could make it so that it detects if it is a deathmatch clip via the squares on the top, 
+if there are more than 10 squares at the top at once, then the clip is definitely deathmatch. (Other tells could also help)
+
+Another tell includes the timer being higher than 2 minutes
+
+Another tell is that it detects more than 1 death in the clip. 
+(Should only allow 1 death per 50 seconds to account for longer source videos.)
+
+
+
+LOW SEVERITY:
+
+Flashbangs could potentially blind you for longer than the Disappear_Threshold. Test and fix this. 
+
+Error Handling - One corrupted video could crash entire batch
+
+💡 Top Enhancement Opportunities:
+
+Change the Resolution Settings to be the output and make the killfeed_region always be a proportion rather than a set value.
+This way it will work with any source resolution. 
+
+FFmpeg Integration - Better compression, smaller files, H.264 support
+Batch Resume - Skip already-processed videos if script is re-run
+
+🧪 Critical Tests You Should Run:
+
+✅ Different resolutions - Test 1440p and 4K videos
+✅ Edge cases - Kills in first/last second of video
+✅ Corrupted files - Make sure one bad file doesn't crash the batch
+
+Would you like me to implement any of these fixes while you're testing? The top 3 I'd recommend tackling first are:
+
+Consistent naming (easy fix)
+Error handling wrapper (prevents crashes)
+
+
+COMPRESSION: 
+
+Make sure to use FFmpeg and Handbrake (it is open source) so that you could compress your videos efficiently. 
+Search up a Handbrake video compression tutorial to know exactly what values you need to conform the video to so that you could put it on Discord, for example.
