@@ -1,0 +1,47 @@
+This file details what order the program should check for weapons. This is to reduce processing time so that the most commonly used weapons are checked first.
+1 should be the first weapon checked, followed by 2, 3... 
+
+1. ak47 
+2. awp
+3. m4a4
+4. m4a1s
+5. scout
+6. galil
+7. famas
+8. aug
+9. sg556
+10. scar20
+11. g3sg1
+
+12. mac10
+13. mp9
+14. mp7
+15. ump45
+16. p90
+17. ppbizon
+18. mp5 (Skip for now)
+
+19. usp
+20. glock
+21. deagle
+22. tec9
+23. dualies
+24. p2000
+25. p250
+26. fiveseven
+27. cz75
+28. r8revolver
+29. zeus
+
+30. mag7
+31. xm1014
+32. nova
+33. sawedoff
+34. negev
+35. m249
+
+Order of Categories: (top is first)
+11 rifles
+7 SMGs
+10 pistols
+6 heavy weapons
