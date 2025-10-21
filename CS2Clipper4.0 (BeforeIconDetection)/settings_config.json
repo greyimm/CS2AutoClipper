@@ -1,0 +1,15 @@
+{
+    "video_folder": "D:\\Videos\\Counter-strike 2",
+    "output_folder": "D:\\Videos\\Counter-strike 2\\CS2Clipper\\trimmedvideos",
+    "unsorted_folder": "D:\\Videos\\Counter-strike 2\\CS2Clipper\\unsortedfiles",
+    "trim_start_seconds": 4,
+    "trim_end_seconds": 3,
+    "output_resolution_width": 1920,
+    "output_resolution_height": 1080,
+    "output_fps": 0,
+    "num_videos_to_process": 5,
+    "show_preview": false,
+    "multiprocessing_mode": "On",
+    "compress_for_discord": true,
+    "save_versions_mode": "Trimmed and Compressed"
+}
