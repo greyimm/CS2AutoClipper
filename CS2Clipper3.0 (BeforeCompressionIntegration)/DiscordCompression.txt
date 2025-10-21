@@ -1,0 +1,39 @@
+Using Handbrake, the following settings should be changed depending on the resolution and length of the video. 
+
+Output Files-> Mp4 File Extension : Always use Mp4
+Output Size : (Set later) /////
+Video Codec: H .264 (x264)
+Framerate (FPS): Same as source
+Encoder Preset: Medium-Veryslow (This controls how long it takes to encode but results in a higher quality image for the same file size.)
+Encoder Profile: High
+Avg Bitrate (kbps): (Set later) /////
+2 Pass Encoding: Enabled
+Turbo first pass: Enabled
+Audio Codec: AAC (avcodec)
+
+Here is a table that shows exactly what value VideoBitrate, AudioBitrate, and Resolution/Fps settings should be based on the length of the video in seconds.
+Time   VideoBitrate AudioBitrate Resolution
+00:10 | 2600       | 96         | 720p60   |
+00:20 | 2600       | 96         | 720p60   |
+00:30 | 1834       | 96         | 720p60   |
+00:40 | 1354       | 96         | 720p60   |
+00:50 | 1066       | 96         | 540p60   |
+01:00 | 874        | 96         | 540p60   |
+01:10 | 736        | 96         | 540p60   |
+01:20 | 634        | 96         | 540p60   |
+01:30 | 554        | 96         | 360p60   |
+01:40 | 490        | 96         | 360p60   |
+01:50 | 437        | 96         | 360p60   |
+02:00 | 394        | 96         | 360p60   |
+
+03:00 | 262        | 64         | 240p60   |
+04:00 | 182        | 64         | 240p60   |
+05:00 | 127        | 64         | 240p60   |
+06:00 | 124        | 32         | 240p60   | (AudioBitrate of 32 might require Mixdown: Mono instead of Stereo)
+07:00 | 102        | 32         | 240p60   |
+08:00 | 086        | 32         | 240p60   |
+09:00 | 074        | 32         | 240p60   |
+10:00 | 063        | 32         | 240p60   |
+
+The goal with this is to always create a video that is 8mb or under, no matter the condition, automatically.
+Therefore, there should be a print message that gives the final size of the file once finished. 
